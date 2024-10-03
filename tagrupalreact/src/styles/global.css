@@ -1,0 +1,15 @@
+/* global.css */
+:root {
+    --primary-color: #640380;  /* Azul suave */
+    --secondary-color: #F5A623;  /* Naranja suave */
+    --background-color: #F8F8F8;  /* Fondo gris claro */
+    --text-color: #333;  /* Texto principal */
+    --heading-font-family: 'Merriweather', serif;  /* Fuente para títulos */
+    --body-font-family: 'Open Sans', sans-serif;  /* Fuente para texto */
+    --font-size-base: 16px;
+    --font-size-large: 20px;
+    --font-size-small: 14px;
+    --padding-base: 10px;
+    --padding-large: 20px;
+  }
+  

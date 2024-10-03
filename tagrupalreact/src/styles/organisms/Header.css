@@ -1,0 +1,23 @@
+.header {
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+.header__logo {
+  height: 40px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header__nav-link {
+  color: white;
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+}
+
+.header__nav-link:hover {
+  color: var(--secondary-color);
+}

@@ -1,0 +1,21 @@
+.main-template {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--padding-large);
+  background-color: var(--background-color);
+}
+
+.main-template__header {
+  margin-bottom: var(--padding-large);
+}
+
+.main-template__footer {
+  margin-top: var(--padding-large);
+  text-align: center;
+}
+
+.main-template__content {
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+}

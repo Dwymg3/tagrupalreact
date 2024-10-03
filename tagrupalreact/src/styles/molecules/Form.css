@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-base);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form__label {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+}
+
+.form__input {
+  padding: var(--padding-base);
+  font-family: var(--body-font-family);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form__input--large {
+  padding: 15px;
+}
+
+.form__submit {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--padding-base);
+  font-size: var(--font-size-large);
+  cursor: pointer;
+}

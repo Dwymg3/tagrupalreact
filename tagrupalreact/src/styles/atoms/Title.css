@@ -1,0 +1,18 @@
+.title {
+    font-family: var(--heading-font-family);
+    color: var(--primary-color);
+    margin-bottom: var(--padding-base);
+  }
+  
+  .title--large {
+    font-size: var(--font-size-large);
+  }
+  
+  .title--medium {
+    font-size: var(--font-size-base);
+  }
+  
+  .title--small {
+    font-size: var(--font-size-small);
+  }
+  

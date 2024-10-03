@@ -1,0 +1,21 @@
+.footer {
+  background-color: var(--primary-color);
+  padding: var(--padding-large);
+  text-align: center;
+  color: white;
+}
+
+.footer__text {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-small);
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  margin-left: var(--padding-base);
+}
+
+.footer__link:hover {
+  color: var(--secondary-color);
+}

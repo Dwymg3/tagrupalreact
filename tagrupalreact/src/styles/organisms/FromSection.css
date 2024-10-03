@@ -1,0 +1,40 @@
+/* FromSection.css */
+.from-section {
+  padding: var(--padding-large);
+  background-color: var(--background-color);
+}
+
+.from-section__title {
+  font-family: var(--heading-font-family);
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  margin-bottom: var(--padding-large);
+}
+
+.from-section__content {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  margin-bottom: var(--padding-base);
+}
+
+.from-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-base);
+}
+
+.from-section__form-label {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+}
+
+.from-section__form-input {
+  padding: var(--padding-base);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+  width: 100%;
+}

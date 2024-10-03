@@ -1,0 +1,27 @@
+.input {
+  padding: var(--padding-base);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+  width: 100%;
+}
+
+.input--large {
+  padding: var(--padding-large);
+  font-size: var(--font-size-large);
+}
+
+.input--small {
+  padding: var(--padding-base);
+  font-size: var(--font-size-small);
+}
+
+.input--error {
+  border-color: red;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}

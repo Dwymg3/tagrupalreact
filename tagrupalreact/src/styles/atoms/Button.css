@@ -1,0 +1,23 @@
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-base);
+    font-family: var(--body-font-family);
+    font-size: var(--font-size-base);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button--primary {
+    background-color: var(--primary-color);
+  }
+  
+  .button--secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .button__icon {
+    margin-right: 5px;
+  }
+  

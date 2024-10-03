@@ -1,0 +1,14 @@
+.label {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  margin-bottom: var(--padding-base);
+}
+
+.label--small {
+  font-size: var(--font-size-small);
+}
+
+.label--large {
+  font-size: var(--font-size-large);
+}
