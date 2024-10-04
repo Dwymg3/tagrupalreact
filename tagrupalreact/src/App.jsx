@@ -2,13 +2,9 @@ import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./organisms/Header";
 import Footer from "./organisms/Footer";
-import Home from "./pages/Home";
 import apiClient from "./api/apiClient";
 import "./styles/App.css";
 
-
-const SubmitArticle = React.lazy(() => import('./pages/SubmitArticle'));
-const Article = React.lazy(() => import("./pages/Article"));
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -44,9 +40,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home articles={articles} fetchData={fetchData} />} />
-          <Route path="/submit" element={<SubmitArticle fetchData={fetchData} />} />
-          <Route path="/article/:id" element={<Article articles={articles} />} />
+
         </Routes>
       </main>
       <Footer />
