@@ -1,5 +1,5 @@
 import React from 'react';
-import Column from './Column';
+import Colum from '../molecules/Colum';
 
 const TaskManager = () => {
   const columnsData = [
@@ -13,7 +13,7 @@ const TaskManager = () => {
   return (
     <div style={{ display: 'flex', gap: '20px' }}>
       {columnsData.map((column, index) => (
-        <Column key={index} name={column.name} tasks={column.tasks} />
+        <Colum key={index} name={column.name} tasks={column.tasks} />
       ))}
     </div>
   );
