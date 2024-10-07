@@ -6,6 +6,6 @@ const Label = ({ htmlFor, children }) => {
             {children}
         </label>
     );
-}
+};
 
 export default Label;

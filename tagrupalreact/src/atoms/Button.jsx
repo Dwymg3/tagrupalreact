@@ -1,14 +1,14 @@
 import React from "react";
 
-const Button =({Children, onClick, loading = false, style ={},disabled=false}) => {
-    return(
+const Button = ({ children, onClick, loading = false, style = {}, disabled = false }) => {
+    return (
         <button
             onClick={onClick}
             style={style}
             className={`custom-button ${loading ? "loading" : ""}`}
             disabled={loading || disabled}
         >
-            {loading ? "Cargando..." : Children}
+            {loading ? "Cargando..." : children}
         </button>
     );
 };

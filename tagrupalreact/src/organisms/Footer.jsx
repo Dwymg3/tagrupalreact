@@ -9,7 +9,7 @@ const Footer = () => {
                 <NavLink to="/privacy" label="Privacidad" />
                 <NavLink to="/contact" label="Contacto" />
             </div>
-            <p className="footer__copy">© 2021 Todos los derechos reservados</p>
+            <p className="footer__copy">© 2024 Todos los derechos reservados</p>
         </footer>
     );
 };

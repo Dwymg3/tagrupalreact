@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import NavLink from "../atoms/NavLink";
 
 const NavMenu = () => {
@@ -16,8 +16,8 @@ const NavMenu = () => {
             </div>
             <div className={`navbar-items ${isActive ? 'is-active' : ''}`}>
                 <NavLink to="/" label="Inicio" />
-                <NavLink to="/news" label="Noticias" />
-                <NavLink to="/submit-article" label="Escribir Artículo" />
+                <NavLink to="/tasks" label="Tareas" />
+                <NavLink to="/submit-task" label="Agregar Tarea" />
             </div>
         </div>
     );

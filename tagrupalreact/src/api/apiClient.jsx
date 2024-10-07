@@ -1,11 +1,12 @@
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 const apiClient = {
-    getArticles: async () => {
+    // Obtener todas las tareas
+    getTasks: async () => {
         try {
-            const response = await fetch(`${API_URL}/articles`);
+            const response = await fetch(`${API_URL}/tasks`);
             if (!response.ok) {
-                throw new Error('Error al obtener los artículos');
+                throw new Error('Error al obtener las tareas');
             }
             return await response.json();
         } catch (error) {
@@ -14,15 +15,30 @@ const apiClient = {
         }
     },
 
-    createArticle: async (article) => {
+    // Obtener una tarea específica por ID
+    getTask: async (id) => {
         try {
-            const response = await fetch(`${API_URL}/articles`, {
+            const response = await fetch(`${API_URL}/tasks/${id}`);
+            if (!response.ok) {
+                throw new Error('Error al obtener la tarea');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    },
+
+    // Crear una nueva tarea
+    createTask: async (task) => {
+        try {
+            const response = await fetch(`${API_URL}/tasks`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(article),
+                body: JSON.stringify(task),
             });
             if (!response.ok) {
-                throw new Error('Error al crear el artículo');
+                throw new Error('Error al crear la tarea');
             }
             return await response.json();
         } catch (error) {
@@ -31,15 +47,16 @@ const apiClient = {
         }
     },
 
-    updateArticle: async (article) => {
+    // Actualizar una tarea existente
+    updateTask: async (task) => {
         try {
-            const response = await fetch(`${API_URL}/articles/${article.id}`, {
+            const response = await fetch(`${API_URL}/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(article),
+                body: JSON.stringify(task),
             });
             if (!response.ok) {
-                throw new Error('Error al actualizar el artículo');
+                throw new Error('Error al actualizar la tarea');
             }
             return await response.json();
         } catch (error) {
@@ -48,32 +65,20 @@ const apiClient = {
         }
     },
 
-    deleteArticle: async (id) => {
+    // Eliminar una tarea por ID
+    deleteTask: async (id) => {
         try {
-            const response = await fetch(`${API_URL}/articles/${id}`, {
+            const response = await fetch(`${API_URL}/tasks/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
-                throw new Error('Error al eliminar el artículo');
+                throw new Error('Error al eliminar la tarea');
             }
         } catch (error) {
             console.error(error);
             throw error;
         }
     },
+};
 
-    approveArticle: async (id) => {
-        try {
-            const response = await fetch(`${API_URL}/articles/${id}/approve`, {
-                method: 'PUT',
-            });
-            if (!response.ok) {
-                throw new Error('Error al aprobar el artículo');
-            }
-        } catch (error) {
-            console.error(error);
-            throw error;
-        }
-    },
-
-}
+export default apiClient;

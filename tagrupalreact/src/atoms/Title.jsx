@@ -1,9 +1,8 @@
 import React from "react";
 
-const Title = ({ text, level = 1 }) => {
+const Title = ({ text, level }) => {
     const Tag = `h${level}`;
-    return <Tag className="title">{text}</Tag>;
+    return <Tag className={`title title--level-${level}`}>{text}</Tag>;
 };
-
 
 export default Title;

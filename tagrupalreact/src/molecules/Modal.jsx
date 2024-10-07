@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Modal = ({
-    hadleClose,
+    handleClose,
     show,
     children,
     size = "medium",
@@ -10,22 +10,22 @@ const Modal = ({
     showCloseButton = true
 }) => {
     useEffect(() => {
-        const hadleEscape = (e) => {
+        const handleEscape = (e) => {
             if (e.key === "Escape") {
-                hadleClose();
+                handleClose();
             }
         };
-        document.addEventListener("keydown", hadleEscape);
+        document.addEventListener("keydown", handleEscape);
         return () => {
-            document.removeEventListener("keydown", hadleEscape);
+            document.removeEventListener("keydown", handleEscape);
         };
-    }, [hadleClose]);
+    }, [handleClose]);
 
     if (!show) return null;
 
-    const handleClose = (e) => {
+    const handleOverlayClick = (e) => {
         if (closeOnOutsideClick && e.target === e.currentTarget) {
-            hadleClose();
+            handleClose();
         }
     };
 
@@ -33,7 +33,7 @@ const Modal = ({
     const modalColorClass = `modal--${color}`;
 
     return (
-        <div className="modal-overlay" onClick={handleClose}>
+        <div className="modal-overlay" onClick={handleOverlayClick}>
             <div className={`modal-content ${modalSizeClass} ${modalColorClass}`}>
                 {showCloseButton && (
                     <button className="modal-close" onClick={handleClose}>Cerrar</button>

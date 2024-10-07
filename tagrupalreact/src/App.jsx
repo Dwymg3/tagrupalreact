@@ -2,22 +2,21 @@ import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./organisms/Header";
 import Footer from "./organisms/Footer";
+import TaskManager from "./organisms/taskManager";
 import apiClient from "./api/apiClient";
 import "./styles/App.css";
 
-
 function App() {
-  const [articles, setArticles] = useState([]);
+  const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
     try {
-      const fetchArticles = await apiClient.getArticles();
-      setArticles(fetchArticles);
-
+      const fetchTasks = await apiClient.getTasks(); 
+      setTasks(fetchTasks);
     } catch (error) {
-      setError("Error al cargar los artículos");
+      setError("Error al cargar las tareas");
     } finally {
       setLoading(false);
     }
@@ -28,7 +27,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <p>Cargando artículos...</p>;
+    return <p>Cargando tareas...</p>;
   }
 
   if (error) {
@@ -40,7 +39,8 @@ function App() {
       <Header />
       <main>
         <Routes>
-
+          <Route path="/" element={<TaskManager tasks={tasks} />} /> {/* Renderiza TaskManager y pasa las tareas */}
+          {/* Aquí puedes agregar otras rutas como para crear o editar tareas */}
         </Routes>
       </main>
       <Footer />
@@ -48,6 +48,4 @@ function App() {
   );
 }
 
-
 export default App;
-
