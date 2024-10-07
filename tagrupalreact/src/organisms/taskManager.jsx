@@ -13,26 +13,30 @@ const TaskManager = () => {
     ]);
 
     const [newTask, setNewTask] = useState({ title: '', description: '', status: 'Backlog' });
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchTasks = async () => {
             try {
                 const tasks = await apiClient.getTasks();
                 const updatedColumns = [...columnsData];
+
                 tasks.forEach(task => {
                     const columnIndex = updatedColumns.findIndex(col => col.name === task.status);
                     if (columnIndex !== -1) {
                         updatedColumns[columnIndex].tasks.push(task);
                     }
                 });
+
                 setColumnsData(updatedColumns);
             } catch (error) {
                 console.error('Error al cargar las tareas:', error);
+                setError('Error al cargar las tareas.');
             }
         };
 
         fetchTasks();
-    }, []);
+    }, []); // Se ejecuta solo una vez al montar
 
     const handleNewTask = async (e) => {
         e.preventDefault();
@@ -47,6 +51,7 @@ const TaskManager = () => {
             setNewTask({ title: '', description: '', status: 'Backlog' });
         } catch (error) {
             console.error('Error al crear la tarea:', error);
+            setError('Error al crear la tarea.');
         }
     };
 
@@ -57,10 +62,11 @@ const TaskManager = () => {
 
     return (
         <div>
+            {error && <p className="error-message">{error}</p>} {/* Muestra el mensaje de error */}
             <Form fields={fields} onSubmit={handleNewTask} buttonLabel="Agregar Tarea" />
             <div style={{ display: 'flex', gap: '20px' }}>
                 {columnsData.map((column, index) => (
-                    <Colum key={index} title={column.name} tasks={column.tasks} />
+                    <Colum key={index} name={column.name} tasks={column.tasks} />
                 ))}
             </div>
         </div>

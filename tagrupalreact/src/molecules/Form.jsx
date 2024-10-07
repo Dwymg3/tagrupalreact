@@ -1,24 +1,21 @@
-import React from "react";
-import Input from "../atoms/Input";
-import Button from "../atoms/Button";
-import Label from "../atoms/Label";
+import React from 'react';
 
 const Form = ({ fields, onSubmit, buttonLabel }) => {
     return (
-        <form className="form" onSubmit={onSubmit}>
-            {fields.map((field, index) => (
-                <div className="form-group" key={index}>
-                    <Label htmlFor={field.id}>{field.label}</Label>
-                    <Input
+        <form onSubmit={onSubmit}>
+            {fields.map(field => (
+                <div key={field.id}>
+                    <label htmlFor={field.id}>{field.label}</label>
+                    <input
+                        id={field.id}
                         type={field.type}
                         value={field.value}
                         onChange={field.onChange}
-                        placeholder={field.placeholder}
-                        name={field.name}
+                        required
                     />
                 </div>
             ))}
-            <Button>{buttonLabel}</Button>
+            <button type="submit">{buttonLabel}</button>
         </form>
     );
 };

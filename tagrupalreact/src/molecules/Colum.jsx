@@ -1,15 +1,15 @@
+// Colum.jsx
 import React from 'react';
-import Task from '../atoms/Task';
 
-const Colum = ({ title, tasks }) => {
+const Colum = ({ name, tasks }) => {
     return (
-        <div className="colum">
-            <h2>{title}</h2>
-            <div className="tasks">
-                {tasks.map((task, index) => (
-                    <Task key={index} task={task} />
+        <div className="column">
+            <h2>{name}</h2>
+            <ul>
+                {tasks.map(task => (
+                    <li key={task.id}>{task.title}</li> // Asume que task tiene un id y un title
                 ))}
-            </div>
+            </ul>
         </div>
     );
 };

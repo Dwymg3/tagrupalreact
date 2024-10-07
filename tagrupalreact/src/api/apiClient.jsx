@@ -1,7 +1,6 @@
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+const API_URL = 'http://localhost:3000/api';
 
 const apiClient = {
-    // Obtener todas las tareas
     getTasks: async () => {
         try {
             const response = await fetch(`${API_URL}/tasks`);
@@ -15,21 +14,6 @@ const apiClient = {
         }
     },
 
-    // Obtener una tarea específica por ID
-    getTask: async (id) => {
-        try {
-            const response = await fetch(`${API_URL}/tasks/${id}`);
-            if (!response.ok) {
-                throw new Error('Error al obtener la tarea');
-            }
-            return await response.json();
-        } catch (error) {
-            console.error(error);
-            throw error;
-        }
-    },
-
-    // Crear una nueva tarea
     createTask: async (task) => {
         try {
             const response = await fetch(`${API_URL}/tasks`, {
@@ -47,7 +31,6 @@ const apiClient = {
         }
     },
 
-    // Actualizar una tarea existente
     updateTask: async (task) => {
         try {
             const response = await fetch(`${API_URL}/tasks/${task.id}`, {
@@ -65,7 +48,6 @@ const apiClient = {
         }
     },
 
-    // Eliminar una tarea por ID
     deleteTask: async (id) => {
         try {
             const response = await fetch(`${API_URL}/tasks/${id}`, {
