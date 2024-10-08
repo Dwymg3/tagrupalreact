@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/molecules/Form.css';
 
 const Form = ({ fields, onSubmit, buttonLabel }) => {
     return (

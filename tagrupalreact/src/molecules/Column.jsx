@@ -1,5 +1,5 @@
-// Colum.jsx
 import React from 'react';
+import '../styles/molecules/Column.css';
 
 const Colum = ({ name, tasks }) => {
     return (
@@ -7,7 +7,7 @@ const Colum = ({ name, tasks }) => {
             <h2>{name}</h2>
             <ul>
                 {tasks.map(task => (
-                    <li key={task.id}>{task.title}</li> // Asume que task tiene un id y un title
+                    <li key={task.id}>{task.title}</li> 
                 ))}
             </ul>
         </div>

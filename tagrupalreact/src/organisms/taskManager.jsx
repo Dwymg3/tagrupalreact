@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Colum from '../molecules/Colum';
+import Column from '../molecules/Column'; 
 import Form from '../molecules/Form';
 import apiClient from '../api/apiClient';
 
 const TaskManager = () => {
     const [columnsData, setColumnsData] = useState([
-        { name: 'Backlog', tasks: [] },
-        { name: 'To Do', tasks: [] },
-        { name: 'Doing', tasks: [] },
-        { name: 'Blocked', tasks: [] },
-        { name: 'Done', tasks: [] },
+        { id: 1, name: 'Backlog', tasks: [] },
+        { id: 2, name: 'To Do', tasks: [] },
+        { id: 3, name: 'Doing', tasks: [] },
+        { id: 4, name: 'Blocked', tasks: [] },
+        { id: 5, name: 'Done', tasks: [] },
     ]);
 
     const [newTask, setNewTask] = useState({ title: '', description: '', status: 'Backlog' });
@@ -36,7 +36,7 @@ const TaskManager = () => {
         };
 
         fetchTasks();
-    }, []); // Se ejecuta solo una vez al montar
+    }, []);
 
     const handleNewTask = async (e) => {
         e.preventDefault();
@@ -62,11 +62,11 @@ const TaskManager = () => {
 
     return (
         <div>
-            {error && <p className="error-message">{error}</p>} {/* Muestra el mensaje de error */}
+            {error && <p className="error-message">{error}</p>} 
             <Form fields={fields} onSubmit={handleNewTask} buttonLabel="Agregar Tarea" />
             <div style={{ display: 'flex', gap: '20px' }}>
-                {columnsData.map((column, index) => (
-                    <Colum key={index} name={column.name} tasks={column.tasks} />
+                {columnsData.map((column) => (
+                    <Column key={column.id} name={column.name} tasks={column.tasks} />
                 ))}
             </div>
         </div>

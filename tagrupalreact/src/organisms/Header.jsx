@@ -1,5 +1,6 @@
 import React from "react";
 import NavMenu from "../molecules/NavMenu";
+import "../styles/organisms/Header.css";
 
 const Header = () => {
     return (

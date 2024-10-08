@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../atoms/Title";
 import Form from "../molecules/Form";
+import "../styles/organisms/form-section.css";
 
 const FormSection = ({ title, fields, buttonLabel, onSubmit }) => {
     return (

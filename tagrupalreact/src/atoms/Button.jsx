@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/atoms/button.css';
 
 const Button = ({ children, onClick, loading = false, style = {}, disabled = false }) => {
     return (

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "../styles/molecules/modal.css";
 
 const Modal = ({
     handleClose,

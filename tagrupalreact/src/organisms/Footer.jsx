@@ -1,5 +1,6 @@
 import React from "react";
 import NavLink from "../atoms/NavLink";
+import "../styles/organisms/Footer.css";
 
 const Footer = () => {
     return (
