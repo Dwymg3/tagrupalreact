@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/atoms/input.css";
+import "../styles/atoms/Input.css";
 
 const Input = ({ type = "text", placeholder, value, onChange, name, disabled = false }) => {
     return (

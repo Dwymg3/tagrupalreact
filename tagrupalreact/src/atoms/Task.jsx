@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/atoms/Task.css";
 
 const Task = ({ title, description, onComplete, onDelete }) => {
     return (

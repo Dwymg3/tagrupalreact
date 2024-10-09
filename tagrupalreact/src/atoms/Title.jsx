@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/atoms/title.css";
+import "../styles/atoms/Title.css";
 
 const Title = ({ text, level }) => {
     const Tag = `h${level}`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/atoms/label.css';
+import '../styles/atoms/Label.css';
 
 const Label = ({ htmlFor, children }) => {
     return (
