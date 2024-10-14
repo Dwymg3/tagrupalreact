@@ -9,7 +9,7 @@ const Navigation = () => {
             <NavLink to="/about" label="Acerca de" />
             <NavLink to="/privacy" label="Privacidad" />
             <NavLink to="/contact" label="Contacto" />
-            <NavLink to="/submit-task" label="Enviar Tarea" /> {/* Asegúrate de que esta ruta esté definida en App.js */}
+            <NavLink to="/submit-task" label="Enviar Tarea" /> 
         </nav>
     );
 };

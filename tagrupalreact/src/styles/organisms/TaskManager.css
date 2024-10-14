@@ -1,10 +1,8 @@
-/* TaskManager.css */
 .task-manager {
     padding: var(--padding-large);
     background-color: var(--background-color);
   }
   
-  /* Estilo para el formulario */
   .form {
     margin-bottom: var(--padding-large);
     padding: var(--padding-base);
@@ -14,31 +12,27 @@
     box-shadow: var(--shadow-light);
   }
   
-  /* Mensaje de error */
   .error-message {
-    color: red; /* Color para errores */
+    color: red; 
     margin-bottom: var(--padding-large);
   }
   
-  /* Estilo para las columnas */
   .column {
-    flex: 1; /* Cada columna ocupará el mismo espacio */
+    flex: 1; 
     background-color: white;
     border: 1px solid var(--primary-color);
     border-radius: var(--border-radius);
     padding: var(--padding-base);
     box-shadow: var(--shadow-light);
   }
-  
-  /* Encabezado de la columna */
+
   .column-header {
     font-size: var(--font-size-large);
     font-family: var(--heading-font-family);
     margin-bottom: var(--padding-base);
-    text-align: center; /* Centrar el texto del encabezado */
+    text-align: center; 
   }
-  
-  /* Estilo para las tareas dentro de las columnas */
+
   .task {
     padding: var(--padding-base);
     margin: var(--padding-base) 0;

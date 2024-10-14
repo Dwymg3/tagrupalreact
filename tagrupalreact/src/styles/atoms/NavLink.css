@@ -1,10 +1,10 @@
 .nav-link {
-    color: var(--primary-color); /* Usando la variable de color primario */
-    text-decoration: none; /* Sin subrayado */
-    padding: var(--padding-base); /* Espaciado */
-    transition: color var(--transition-duration); /* Transición para el color */
+    color: var(--primary-color); 
+    text-decoration: none; 
+    padding: var(--padding-base); 
+    transition: color var(--transition-duration); 
 }
 
 .nav-link:hover {
-    color: var(--secondary-color); /* Cambia el color al pasar el mouse */
+    color: var(--secondary-color); 
 }

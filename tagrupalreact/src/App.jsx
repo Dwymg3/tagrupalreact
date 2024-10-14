@@ -5,9 +5,9 @@ import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
 import TaskManager from './organisms/TaskManager';
+import { NavLink } from 'react-router-dom';
 
 function App() {
-    // Datos de ejemplo para las tareas
     const tasks = [
         { id: 1, title: 'Tarea 1', status: 'to-do' },
         { id: 2, title: 'Tarea 2', status: 'in-progress' },

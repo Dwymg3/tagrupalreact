@@ -1,14 +1,12 @@
 import React from 'react';
 import Column from '../molecules/Column';
 
-const TaskManager = ({ tasks = [] }) => { // Asigna un valor predeterminado a tasks
-    // Asegúrate de que los IDs sean números
+const TaskManager = ({ tasks = [] }) => { 
     const formattedTasks = tasks.map(task => ({
         ...task,
-        id: Number(task.id) // Asegúrate de que el ID sea un número
+        id: Number(task.id) 
     }));
 
-    // Agrupar tareas por columna (suponiendo que el status define la columna)
     const columns = [...new Set(formattedTasks.map(task => task.status))];
 
     return (
@@ -17,7 +15,7 @@ const TaskManager = ({ tasks = [] }) => { // Asigna un valor predeterminado a ta
                 <Column
                     key={columnStatus}
                     status={columnStatus}
-                    tasks={formattedTasks.filter(task => task.status === columnStatus)} // Filtra tareas por columna
+                    tasks={formattedTasks.filter(task => task.status === columnStatus)} 
                 />
             ))}
         </div>

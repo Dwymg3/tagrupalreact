@@ -10,7 +10,7 @@ const Column = ({ status, tasks }) => {
                     <Task key={task.id} task={task} />
                 ))
             ) : (
-                <p>No hay tareas en esta columna.</p> // Mensaje si no hay tareas
+                <p>No hay tareas en esta columna.</p> 
             )}
         </div>
     );
