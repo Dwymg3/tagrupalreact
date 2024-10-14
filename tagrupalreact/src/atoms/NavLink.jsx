@@ -1,6 +1,5 @@
 import React from "react";
 import NavLink from "../atoms/NavLink"; 
-import "../styles/atoms/NavLink.css"
 
 const Navigation = () => {
     return (
