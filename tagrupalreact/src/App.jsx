@@ -5,7 +5,6 @@ import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
 import TaskManager from './organisms/TaskManager';
-import { NavLink } from 'react-router-dom';
 
 function App() {
     const tasks = [
@@ -18,17 +17,26 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <MainTemplate>
-                            <TaskManager tasks={tasks} /> {/* Pasar las tareas aquí */}
-                        </MainTemplate>
-                    }
-                />
-                <Route path="/about" element={<MainTemplate><About /></MainTemplate>} />
-                <Route path="/privacy" element={<MainTemplate><Privacy /></MainTemplate>} />
-                <Route path="/contact" element={<MainTemplate><Contact /></MainTemplate>} />
+                <Route path="/" element={
+                    <MainTemplate>
+                        <TaskManager tasks={tasks} />
+                    </MainTemplate>
+                } />
+                <Route path="/about" element={
+                    <MainTemplate>
+                        <About />
+                    </MainTemplate>
+                } />
+                <Route path="/privacy" element={
+                    <MainTemplate>
+                        <Privacy />
+                    </MainTemplate>
+                } />
+                <Route path="/contact" element={
+                    <MainTemplate>
+                        <Contact />
+                    </MainTemplate>
+                } />
             </Routes>
         </Router>
     );

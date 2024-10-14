@@ -1,5 +1,6 @@
 import React from 'react';
 import Column from '../molecules/Column';
+import '../styles/organisms/TaskManager.css';
 
 const TaskManager = ({ tasks = [] }) => { 
     const formattedTasks = tasks.map(task => ({

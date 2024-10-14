@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavLink from "../atoms/NavLink";
+import "../styles/molecules/NavMenu.css";
 
 const NavMenu = () => {
     const [isActive, setIsActive] = useState(false);

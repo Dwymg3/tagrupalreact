@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styles/molecules/Form.css';
 
 const Form = ({ fields, onSubmit, buttonLabel }) => {
@@ -20,20 +19,6 @@ const Form = ({ fields, onSubmit, buttonLabel }) => {
             <button type="submit">{buttonLabel}</button>
         </form>
     );
-};
-
-Form.propTypes = {
-    fields: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            label: PropTypes.string.isRequired,
-            type: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired,
-            onChange: PropTypes.func.isRequired
-        })
-    ).isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    buttonLabel: PropTypes.string.isRequired
 };
 
 

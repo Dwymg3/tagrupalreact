@@ -1,12 +1,13 @@
 import React from 'react';
+import Header from '../organisms/Header';
 
 function MainTemplate({ children }) {
-    console.log("Rendering MainTemplate Component"); // Verificar si MainTemplate se renderiza correctamente
+    console.log("Rendering MainTemplate Component");
     return (
         <div>
-            <header>Main Template Header</header>
+            <Header />
             <main>{children}</main>
-            <footer>Main Template Footer</footer>
+            <Footer />
         </div>
     );
 }
