@@ -1,17 +1,19 @@
 import React from 'react';
-import '../styles/molecules/Column.css';
+import Task from '../atoms/Task';
 
-const Colum = ({ name, tasks }) => {
+const Column = ({ status, tasks }) => {
     return (
-        <div className="column">
-            <h2>{name}</h2>
-            <ul>
-                {tasks.map(task => (
-                    <li key={task.id}>{task.title}</li> 
-                ))}
-            </ul>
+        <div className={`column column-${status}`}>
+            <h2>{status}</h2>
+            {tasks.length > 0 ? (
+                tasks.map(task => (
+                    <Task key={task.id} task={task} />
+                ))
+            ) : (
+                <p>No hay tareas en esta columna.</p> // Mensaje si no hay tareas
+            )}
         </div>
     );
 };
 
-export default Colum;
+export default Column;

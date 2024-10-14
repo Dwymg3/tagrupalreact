@@ -10,7 +10,7 @@ const apiClient = {
             return await response.json();
         } catch (error) {
             console.error(error);
-            throw error;
+            throw error; // Puedes manejar esto más adelante al mostrar un mensaje al usuario.
         }
     },
 

@@ -25,3 +25,8 @@ footer {
   margin-top: var(--padding-large);
   font-size: var(--font-size-base);
 }
+
+
+.error-message {
+  color: red;
+}

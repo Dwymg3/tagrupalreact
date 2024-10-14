@@ -1,15 +1,64 @@
-/* global.css */
 :root {
-    --primary-color: #640380;  /* Azul suave */
-    --secondary-color: #F5A623;  /* Naranja suave */
-    --background-color: #F8F8F8;  /* Fondo gris claro */
-    --text-color: #333;  /* Texto principal */
-    --heading-font-family: 'Merriweather', serif;  /* Fuente para títulos */
-    --body-font-family: 'Open Sans', sans-serif;  /* Fuente para texto */
-    --font-size-base: 16px;
-    --font-size-large: 20px;
-    --font-size-small: 14px;
-    --padding-base: 10px;
-    --padding-large: 20px;
-  }
+  --primary-color: #640380; /* Azul suave */
+  --secondary-color: #F5A623; /* Naranja suave */
+  --background-color: #F8F8F8; /* Fondo gris claro */
+  --text-color: #333; /* Texto principal */
+  --focus-color: #FF5733; /* Color para el foco */
+
+  --heading-font-family: 'Merriweather', serif; /* Fuente para títulos */
+  --body-font-family: 'Open Sans', sans-serif; /* Fuente para texto */
   
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --font-size-small: 14px;
+
+  --padding-base: 10px;
+  --padding-large: 20px;
+
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
+  --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0px 6px 10px rgba(0, 0, 0, 0.15);
+
+  --max-width-container: 1200px;
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: var(--padding-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  color: var(--primary-color);
+  margin-bottom: var(--padding-large);
+}
+
+.button {
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-duration);
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+input:focus, button:focus {
+  outline: 3px solid var(--focus-color);
+}
+
+@media (max-width: var(--breakpoint-tablet)) {
+  .container {
+    padding: 20px;
+  }
+}

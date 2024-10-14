@@ -1,0 +1,39 @@
+/* MainTemplate.css */
+.main-template {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Contenido principal */
+  .main-content__content {
+    flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    padding: var(--padding-large);
+  }
+  
+  /* Estilos del header y footer */
+  header {
+    background-color: var(--primary-color);
+    color: white; /* Color de texto blanco para contraste */
+    padding: var(--padding-base);
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: white; /* Color de texto blanco para contraste */
+    padding: var(--padding-base);
+    text-align: center; /* Centra el contenido del footer */
+  }
+  
+  /* Enlaces del footer */
+  .footer__links {
+    margin-bottom: var(--padding-large);
+  }
+  
+  .footer__copy {
+    font-size: var(--font-size-small);
+    margin: 0; /* Elimina el margen para el texto de derechos reservados */
+  }
+  
